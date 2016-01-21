@@ -201,7 +201,7 @@ function my_entity_form_submit_delete($form, &$form_state) {
   }
   $my_entity = $form_state['my_entity'];
   $my_entity_uri = entity_uri('my_entity', $my_entity);
-  $form_state['redirect'] = array($my_entity_uri['path'] . '/delete', array('query' => $destination));
+  $form_state['redirect'] = array('admin/content/' . $my_entity_uri['path'] . '/delete', array('query' => $destination));
 
 }
 
